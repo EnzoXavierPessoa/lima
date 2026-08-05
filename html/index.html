@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Um guia completo sobre HTML e suas tags.">
+<meta name="keywords" content="HTML, tags, programação, web design">
+<meta name="author" content="Enzo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Griffy&display=swap" rel="stylesheet">
+<title>Meu primeiro HTML</title>
+<style>body{font-family:Arial,sans-serif;margin:30px}table{border-collapse:collapse}th,td{border:1px solid #000;padding:8px}</style>
+</head>
+<body>
+<main>
+<h1 style="font-family:Griffy,sans-serif">Bem-vindo ao site</h1>
+<h2>Título Secundário</h2>
+<h3>Subtítulo</h3>
+<h4>Item</h4><h5>Subitem</h5><h6>Ponto</h6>
+<p>Este é um exemplo de uma página definida com o português do Brasil.</p>
+<p id="paragrafo">Cadê o hexa?</p>
+<button id="botao">Clique aqui</button>
+
+<p>Minha terra tem palmeiras,<br>Onde canta o <strong>Sabiá</strong>.</p>
+
+    <h2>Minha Lista de Compras</h2>
+    <ul>
+    <li>Maçã</li><li>Pão</li><li>Leite</li><li>Ovos</li>
+</ul>
+
+<h2>Passos para ligar um computador</h2>
+<ol>
+<li>Verificar o cabo de alimentação.</li>
+<li>Conectar o cabo ao computador.</li>
+<li>Pressionar o botão de ligar.</li>
+<li>Aguardar a inicialização.</li>
+</ol>
+
+    <link rel="icon" href="/caminho-do-seu-favicon.ico" type="bola de cristal.png">
+
+<p><a href="https://www.google.com" target="_blank" rel="noopener">Visite o Google</a></p>
+<p><a href="https://sp.senai.br" target="_blank" rel="noopener">Acesse o portal do SENAI</a></p>
+
+<a href="https://img.magnific.com/free-photo/crystal-ball-with-red-light_23-2150439121.jpg" target="_blank">
+<img src="https://img.magnific.com/free-photo/crystal-ball-with-red-light_23-2150439121.jpg" alt="Imagem" width="300">
+</a>
+ 
+<table>
+<tr><th>Nome</th><th>Idade</th><th>Cidade</th></tr>
+<tr><td>João</td><td>16</td><td>São Paulo</td></tr>
+<tr><td>Ana</td><td>16</td><td>São Paulo</td></tr>
+</table>
+</main>
+<footer><p>&copy; 2026 - Todos os direitos reservados.</p></footer>
+<script>
+const paragrafo=document.querySelector("#paragrafo");
+const botao=document.querySelector("#botao");
+botao.addEventListener("click",()=>{paragrafo.textContent="O gato comeu.";});
+</script>
+</body>
+</html>
