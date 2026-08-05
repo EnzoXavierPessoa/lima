@@ -6,38 +6,55 @@
     <title>Pet Shop do João</title>
     <link rel="stylesheet" href="petshopstyle.css">
     <style>
-        :root{
+        :root {
             --primary-color: #19591e;
             --secondary-color: #1bb127;
             --background-color: #f4f4f9;
             --text-color: #1a1a1c;
         }
-        [data-theme="dark"]{
+
+        [data-theme="dark"] {
             --primary-color: #48a74d;
             --secondary-color: #a3ff61;
             --background-color: #222;
-            --text-color: #f4f4f9;         
+            --text-color: #f4f4f9;        
         }
-        body{
+
+        body {
             background-color: var(--background-color);
             color: var(--text-color);
             transition: background-color 0.3s, color 0.3s;
         }
-        a{
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        a {
             color: var(--primary-color);
             text-decoration: none;
             transition: color 0.3s;
         }
+
         a:hover {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            color: var(--secondary-color);
         }
-        /* Padronizando a classe dos botões */
+
         .btn, .bnt {
             background-color: var(--primary-color);
             color: #fff;
@@ -47,6 +64,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .btn:hover, .bnt:hover {
             background-color: var(--secondary-color);
             color: var(--text-color);
@@ -54,6 +72,7 @@
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="container">
             <h1 class="logo">Pet Shop do João</h1>
@@ -64,41 +83,57 @@
                     <li><a href="#about">Sobre nós</a></li>
                     <li><a href="#contact">Contatos</a></li>
                 </ul> 
-                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
             </nav>
-           <button id="theme-toggle" class="btn">Alterar Tema</button>
+            <button id="theme-toggle" class="btn">Alterar Tema</button>
         </div>
     </header>
 
-    <main class="main-content container">
+    <div class="container main-layout" style="display: grid;  gap: 2rem; margin-top: 2rem;">
+        
+        <main>
+            <section class="cards" id="services">
+                <h2>Nossos Serviços</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                    
+                    <div class="card" style="background: var(--background-color); padding: 1rem; border-radius: 8px; border: 1px solid var(--primary-color);">
+                        <h3>Banho e Tosa</h3>
+                        <p>Deixe seu pet limpo, cheiroso e com o visual impecável.</p>
+                        <button class="bnt" style="margin-top: 1rem;">Saiba mais</button>
+                    </div>
+
+                    <div class="card" style="background: var(--background-color); padding: 1rem; border-radius: 8px; border: 1px solid var(--primary-color);">
+                        <h3>Pet Hotel</h3>
+                        <p>Hospedagem segura e confortável para quando você precisar viajar.</p>
+                        <button class="bnt" style="margin-top: 1rem;">Saiba mais</button>
+                    </div>
+
+                    <div class="card" style="background: var(--background-color); padding: 1rem; border-radius: 8px; border: 1px solid var(--primary-color);">
+                        <h3>Clínica Veterinária</h3>
+                        <p>Cuidado completo para a saúde do seu pet.</p>
+                        <button class="bnt" style="margin-top: 1rem;">Saiba mais</button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
         <aside class="sidebar">
             <h2>Sobre o Petshop</h2>
             <p>A Pet Shop do João oferece serviços de alta qualidade para cuidar do seu melhor amigo.</p>
-            <button class="bnt">Saiba mais</button>
-            <img src="" alt="Banho e Tosa">
-            <h3>Clinica Veterinaria</h3>
-            <p>Atendimento especializado e humanizado para todas as necessidades do seu pet.</p>
-            <button class="bnt">Saiba mais</button>
-            <ul class="sidebar-link">
-               <li><a href="#">Cliníca Veterinária</a></li>
-               <li><a href="#">Banho e Tosa</a></li>
-               <li><a href="#">Pet Hotel</a></li>
+            <button class="bnt" style="margin-top: 1rem;">Saiba mais</button>
+            
+            <ul class="sidebar-link" style="list-style: none; padding: 0; margin-top: 1.5rem;">
+               <li style="margin-bottom: 0.5rem;"><a href="#">Banho e Tosa</a></li>
+               <li style="margin-bottom: 0.5rem;"><a href="#">Pet Hotel</a></li>
+               <li style="margin-bottom: 0.5rem;"><a href="#">Clínica Veterinária</a></li>
                <li><a href="#">Produtos para Pets</a></li>
-             </ul>
+            </ul>
         </aside>
-    </main>
 
-    <section class="cards">
-        <h2>Nossos Serviços</h2>
-        <div class="card">
-            <img src="" alt="Clinica veterinaria">
-            <h3>Clinica Veterinária</h3>
-            <p>Cuidado completo para a saúde do seu pet.</p>
-            <button class="bnt">Saiba mais</button>
-        </div>
-    </section>
+    </div>
 
-    <footer class="footer">
+    <footer class="footer" id="contact" style="margin-top: 3rem; padding: 2rem 0; background-color: rgba(0,0,0,0.05);">
         <div class="container">
             <p>&copy; Pet Shop do João. Todos os direitos reservados.</p>
             <p><strong>Endereço:</strong> Rua dos Animais, 123, Bairro Pet, Cidade dos Bichos</p>
