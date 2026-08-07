@@ -91,7 +91,16 @@
     <div class="container main-layout" style="display: grid;  gap: 2rem; margin-top: 2rem;">
         
         <main>
-            <section class="cards" id="services">
+            <section class="servicos-container">
+  <h2>Nossos Serviços</h2>
+  
+  <div class="cards-grid">
+    <div class="card">Banho e Tosa . . .</div>
+    <div class="card">Pet Hotel . . .</div>
+    <div class="card">Clínica Veterinária . . .</div>
+  </div>
+  <img src="cachorro.png" alt="Exame veterinário de cachorro">
+</section>
                 <h2>Nossos Serviços</h2>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
@@ -147,6 +156,7 @@
         themeToggle.addEventListener("click", () => {
             document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
         });
+        
     </script>
 </body>
 </html>
