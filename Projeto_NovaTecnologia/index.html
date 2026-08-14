@@ -1,17 +1,30 @@
-```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    
+    <!-- Conectando o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
+    
+</div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Nova Tecnologia Informática</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+
+    <!-- Fonte Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- JavaScript -->
     <script defer src="js/menu.js"></script>
     <script defer src="js/carousel.js"></script>
 </head>
@@ -19,15 +32,12 @@
 <body>
 
     <!-- Cabeçalho -->
-    <header>
-        <nav aria-label="Menu de navegação principal">
+  
 
-            <div class="logo">
-                <img src="images/logo.png" alt="Logo da empresa Nova Tecnologia Informática">
+            
+              
             </div>
 
-            <div class="nome">
-                <h1>Nova Tecnologia Informática</h1>
             </div>
 
             <!-- Menu -->
@@ -37,7 +47,7 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-                 
+
             <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
                 &#8801;
             </button>
@@ -45,105 +55,84 @@
         </nav>
     </header>
 
-    <!-- Início -->
-    <section id="inicio" class="carousel" aria-labelledby="carousel-heading">
+    <!-- Faixa azul com título -->
+    <section class="faixa-titulo">
+        <h2>Nova Tecnologia Informática</h2>
+        <p>Soluções modernas em Tecnologia da Informação</p>
+    </section>
 
-        <article class="carousel-item">
-            <img src="images/imagem1.jpg" alt="Consulta em TI">
-        </article>
+    <!-- Início / Carrossel -->
+    <section id="inicio" class="carousel">
 
-        <article class="carousel-item">
-            <img src="images/imagem2.jpg" alt="Desenvolvimento de Sistemas">
-        </article>
+        
 
-        <article class="carousel-item">
-            <img src="images/imagem3.jpg" alt="Infraestrutura de TI">
-        </article>
-
-        <article class="carousel-item">
-            <img src="images/imagem4.jpg" alt="Suporte Técnico">
-        </article>
+      <!-- Serviços -->
+<section id="servicos">
+    <div class="container">
 
         <div>
-            <button class="carousel-btn prev" aria-label="Imagem Anterior">
-                &lt;
-            </button>
 
-            <button class="carousel-btn next" aria-label="Próxima Imagem">
-                &gt;
-            </button>
+             <h2>Nossos Serviços</h2>
+
+        <div class="servicos">
+            
         </div>
+
+       
+
+        </div>
+
+    </div>
+</section>
+
+        </div>
+
+        <button class="carousel-btn prev" aria-label="Imagem Anterior">
+            &lt;
+        </button>
+
+        <button class="carousel-btn next" aria-label="Próxima Imagem">
+            &gt;
+        </button>
 
     </section>
 
     <!-- Sobre -->
     <section id="sobre">
+
         <div class="container">
 
-            <h2>Sobre Nós</h2>
+
 
             <p>
-                A Nova Tecnologia Informática oferece soluções
-                modernas e personalizadas em tecnologia da informação.
-            </p>
-
-            <p>
-                Trabalhamos com desenvolvimento de sistemas,
-                infraestrutura de TI e suporte técnico.
+               consutoria em TI
             </p>
 
         </div>
+
     </section>
 
     <!-- Serviços -->
-    <section id="servicos" class="services">
+    
 
-        <div class="container">
+        
 
             <h2>Nossos Serviços</h2>
 
-            <div class="service-list">
+            
 
-                <article class="service-item">
-                    <h3>Desenvolvimento de Software</h3>
-                    <p>
-                        Soluções personalizadas para atender
-                        às suas necessidades.
-                    </p>
-                </article>
+ <div class="service-list">
 
-                <article class="service-item">
-                    <h3>Suporte Técnico</h3>
-                    <p>
-                        Assistência contínua para manter
-                        sua empresa operando.
-                    </p>
-                </article>
+.services {
+    padding: 50px 0;
+    text-align: center;
+}
 
-                <article class="service-item">
-                    <h3>Infraestrutura de TI</h3>
-                    <p>
-                        Soluções personalizadas para melhorar
-                        sua infraestrutura de tecnologia.
-                    </p>
-                </article>
 
-                <article class="service-item">
-                    <h3>Implementação de TI</h3>
-                    <p>
-                        Projeto e implementação de infraestrutura
-                        de TI para empresas.
-                    </p>
-                </article>
 
-            </div>
-
-        </div>
-
-    </section>
+            
 
     <!-- Contato -->
-    <section id="contato">
 
         <div class="container">
 
@@ -192,4 +181,3 @@
 </body>
 
 </html>
-```
