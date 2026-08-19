@@ -1,0 +1,300 @@
+/*reset básico de estilo para remover imagens e preenchimento padrão dos elementos*/
+* /*seleciona todos os elementos da página*/ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0eded;
+    color: #333
+}
+a {
+    color: white;
+}
+/*Define uma largura máxima para o conteúdo e centralizar*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*Cabeçalho/Header*/
+header {
+    background-color: #005a8d;
+    color:white;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+header nav {
+    display: flex;
+    /*flex-direction: row; default*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+/*Remove estilo padrão da .ista de navegação e adiciona espaçamento*/
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+}
+header nav ul li a {
+    color: white;
+    /*text-decoration: none;*/
+    font-size: 16px;
+}
+/*Configuração do logotipo da empresa*/
+.logo {
+    display: flex;
+}
+.nome {
+    width: 70%;
+    margin-left: 2px;
+}
+.nome h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #faf6f6
+}
+/*Seção do carrossel de imagens e informações.*/
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    overflow: hidden; /*Garante que apenas um item seja visível*/
+}
+.carousel-container {
+    display: flex;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 10px 5px 5px rgba(0,0,0, 0.5);
+}
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 1px;
+    border-radius: 8px;
+}
+/*Botões de navegação*/
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,90,141, 0.75);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+.carousel-btn.prev {
+    left: 10px;
+}
+.carousel-btn.next {
+    right: 10px;
+}
+/*Seção de serviços*/
+.services {
+    padding: 2rem 0;
+    text-align: center;
+}
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.services-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.5)
+}
+/*Estilização do rodapé*/
+footer {
+    text-align: center;
+    background-color: #005a8b;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}
+/*Estilização dos elementos da página sobre*/
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;text-align: center;
+    padding: 2rem 0;
+}
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+.content h2{
+    font-size: 2rem;
+    margin-bottom: 1.5rem
+}
+.content-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.content-item {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 5px rgba(22, 22, 22, 0.5);
+    flex: 1 1 300px;
+}
+.content-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+.content-item ul li {
+    background-color: #005a8d;
+    color: white;
+    padding: 10px 13px;
+    margin: 8px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 1.5px 1.5px 4px rgba(0,0,0, 1);
+}
+.content-item ul li:before {
+    content: "\2714" /*"✔" acrescenta um simbulo de "chack" antes do elemento selecionado*/;
+    font-size: 18px;
+    color: #3e7ff8;
+}
+img {
+    max-width: 100%;
+}
+/*Responsividade para telas menores*/
+@media (max-width: 768px) {
+    /*No carrossel, empilhar imagem e texto*/
+    .carousel-item{
+        flex-direction: column;
+        text-align: center;
+    }
+    .carousel-item img{
+        margin-bottom: 20px;
+        max-width: 90%;
+    }
+}
+/*Menu responsivo*/
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        margin: 10px;
+    }
+ 
+    /*Esconde o menu por padrão e exibe quando ativado*/
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #005a8d;
+        width: 100%;
+        text-align: center;
+    }
+    .menu.show {
+        display: flex
+    }
+    .menu li {
+        padding: 10px
+    }
+}
+style css
+ 
+.servicos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.servicos {
+    width: 300px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.7)
+}
+.servicos img {
+    width: 100%;
+    border-radius: 5px;
+}
+.servicos h3 {
+    margin: 10px 0;
+    color: #333;
+}
+.servicos p {
+    font-size: 14px;
+    color: #666
+}
+servicos css
+ 
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0,7)
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px
+}
+textarea {
+    height: 100px;
+    resize: vertical
+}
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background: #005a8d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-submit:hover {
+    background :#3c90c9;
+}
